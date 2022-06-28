@@ -22,7 +22,8 @@ html {
 }
 
 body {
-
+  color: var(--font-light);
+  font-family: 'Roboto', sans-serif;
 }
 
 
