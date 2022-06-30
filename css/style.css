@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root {
-  --font-dark: #333333;
-  --font-light: #ffffff;
+  --text-dark: #333333;
+  --text-light: #ffffff;
   --heading-dark: #413d4b;
   --turquoise: #00e0d0;
 }
@@ -19,25 +19,300 @@ html {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+  /* padding: 0;
+  margin: 0; */
 }
 
 body {
+  color: var(--text-light);
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
 
+}
+
+.text-dark {
+  color: var(--text-dark);
 }
 
 
 /*
 ***************************** Header **************************/
 /* navbar font Roboto */
+header {
+  padding-top: 1rem;
+  height: 100vh;
+  background-image: url('../images/bgk-header.png');
+  background-size: cover;
+  position: relative;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: .5rem 0; */
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+  padding: 0;
+}
+
+nav ul li a#logo {
+  color: var(--turquoise);
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+nav ul li:nth-child(2) {
+  margin-right: auto;
+}
+
+nav ul li a.nav-link {
+  text-transform: uppercase;
+}
+
+nav ul li a, nav ul li a:visited {
+  text-decoration: none;
+  color: var(--text-light);
+  margin: 0 1rem;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: var(--turquoise)
+}
+
+nav ul li a.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--turquoise);
+  opacity: 0;
+  transition:  0.2s ease-in-out;
+  transition-duration: 0.2s;
+}
+nav ul li a.nav-link:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+#hero-section {
+  display: block;
+  text-align: center;
+  max-width: 43%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#hero-section .hero-heading {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
+#hero-section .hero-secondary {
+  display: block;
+  line-height: 2rem
+}
+hr.separator {
+  width: 3rem;
+  height: .25px;
+  border-color: var(--turquoise);
+  margin: 1.5rem auto 2rem;
+}
+#hero-section button {
+  color: var(--turquoise);
+  background-color: transparent;
+  border: 1px solid var(--turquoise);
+  border-radius: .4rem;
+  padding: .6rem .8rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-size: .8rem;
+  transition: all 0.3s ease-out;
+}
+
+#hero-section button:hover {
+  /* color: var(--text-light);
+  border-color: var(--text-light); */
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px) scale(1.1);
+}
+
 
 /*
 *********************** Our Story Section *********************/
+#our-story-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#our-story-section h2 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+}
+.our-story-img {
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  flex-basis: 40%;
+  justify-items: center;
+}
+.our-story-text {
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 55%;
+  line-height: 1.5rem;
+  padding: 2rem;
+  /* margin: 0 1rem; */
+  flex-basis: 60%;
+
+}
+
+#our-story-section button {
+  color: var(--turquoise);
+  background-color: transparent;
+  border: 1px solid var(--turquoise);
+  border-radius: .4rem;
+  padding: .6rem .8rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-size: .8rem;
+  transition: all 0.3s ease-out;
+}
+
+#our-story-section button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px) scale(1.1);
+}
 
 /*
 ************************* Watch Section ***********************/
 
+#watch-section {
+  padding-top: 1rem;
+  height: 40rem;;
+  background-image: url('../images/bgk-middle.png');
+  background-size: cover;
+  position: relative;
+  /* display: flex; */
+}
+
+#watch-section div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#watch-section h3 {
+  transform: translateX(-13%);
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 400;
+}
 /*
 *********************** Expertise Section *********************/
+
+#expertise-section {
+  padding: 2rem 0;
+}
+#expertise-section h2 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#expertise-section p {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+#expertise-section .separator {
+  border-color: #fff;
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+  .card:nth-child(2),
+  .card:nth-child(5) {
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+  }
+
+  .card:nth-child(1),
+  .card:nth-child(2),
+  .card:nth-child(3) {
+    border-bottom: 1px solid #efefef;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    border: none;
+  }
+  .card:nth-child(1),
+  .card:nth-child(3),
+  .card:nth-child(5) {
+    border-right: 1px solid #efefef;
+  }
+
+  .card:nth-child(1),
+  .card:nth-child(2),
+  .card:nth-child(3),
+  .card:nth-child(4) {
+    border-bottom: 1px solid #efefef;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+
+  .card:nth-child(1),
+  .card:nth-child(2),
+  .card:nth-child(3),
+  .card:nth-child(4),
+  .card:nth-child(5) {
+    border-bottom: 1px solid #efefef;
+  }
+}
+
+
+#expertise-section .cards .card {
+  color: var(--text-dark);
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding: 2rem;
+  height: 280px;
+}
+
+#expertise-section .cards .card p {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* gap: 1rem; */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  border: -1px solid transparent;
+  align-items: center;
+}
+
+
 
 /*
 ************************* Team Section ************************/
