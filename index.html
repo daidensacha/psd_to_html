@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header>
+   <header>
     <nav>
       <ul>
         <li><a href=""><img src="images/logo.png" alt="logo"></a></li>
@@ -60,10 +60,12 @@
       </div>
     </section>
     <section id="watch-section">
-      <div>
-        <img src="images/play.png" alt="Play">
-        <h3>Watch our story</h3>
-      </div>
+
+      <figure class="storyfigure">
+        <a href="#watch-section"><img src="images/play.png" alt="pics"></a>
+
+        <figcaption>Watch Our Story</figcaption>
+      </figure>
 
     </section>
     <section id="expertise-section">
@@ -104,8 +106,89 @@
         </div>
       </div>
     </section>
-    <section id="team-section">team section</section>
-    <section id="contact-client-section">contact/ client section</section>
+    <section id="team">
+      <h2 class="section-heading text-light">Meet Out Amazing Team</h2>
+      <p class="section-sub text-light">Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
+      <hr class="separator">
+
+      <!-- cards start -->
+      <div class="cards">
+        <div class="card" style="width: 18rem;">
+          <img src="images/Morgan_Freeman.jpg" class="card-img-top" alt="Morgan Freeman">
+          <div class="card-body">
+            <p class="card-name">Semf Ucuk</p>
+            <p class="position">CEO & Founder</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="images/elon_musk.jpg" class="card-img-top" alt="Elon Musk">
+          <div class="card-body">
+            <p class="card-name">Dik Adalin</p>
+            <p class="position">Engineering</p>
+
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="images/lucy_liu.jpg" class="card-img-top" alt="Lucy Liu">
+          <div class="card-body">
+            <p class="card-name">Jeng Kol</p>
+            <p class="position">Designer</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="images/leonardo_dicaprio.jpg" class="card-img-top" alt="Leonardo Dicaprio">
+          <div class="card-body">
+            <p class="card-name">Semf Ucuk</p>
+            <p class="position">Marketing</p>
+          </div>
+        </div>
+
+      </div>
+      <!-- cards finish -->
+
+      <p class="text-secondary">
+        <span>Become a part of our dream team. Let's join us!</span>
+      </p>
+      <button>We are hiring</button>
+
+    </section>
+    <section id="contact-client-section">
+      <div class="form-container">
+        <h3 class="section-heading text-dark">Give Us Good News</h3>
+        <form action="post">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Name" required>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Email" required>
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="Subject" required>
+          <label for="message">Your Message"</label>
+          <textarea id="message" name="message" type="text" rows="11" placeholder="Your Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="logo-container">
+        <h3 class="section-heading text-dark">Our Happy Client</h3>
+        <div class="client-logos">
+          <img src="images/Zara_Logo.png" alt="Zara">
+          <img src="images/1280px-Barneys_New_York_Logo.png" alt="Barneys">
+          <img src="images/Calvin_klein_logo.png" alt="Calvin Klein">
+          <img src="images/Converse_logo.png" alt="Converse">
+          <img src="images/1280px-Levi's_logo.png" alt="Levis">
+          <img src="images/Logo_of_Mango_(new).png" alt="Mango">
+          <img src="images/1280px-Gucci_Logo.png" alt="Gucci">
+          <img src="images/1280px-Logo_NIKE.png" alt="Nike">
+          <img src="images/Puma_Logo.png" alt="Puma">
+          <img src="images/Billabong.png" alt="Billabong">
+        </div>
+
+
+
+      </div>
+    </section>
   </main>
   <footer>
     footer
